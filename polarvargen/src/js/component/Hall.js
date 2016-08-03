@@ -43,4 +43,11 @@ $itemFree.on('click', function(){
 		HallActions.addTicket(ticket);
 	}
 })
-HallActions.rerender()
+HallActions.rerender();
+
+let cancelBooking = function(){
+	// Делаем еще что то чтобы сбросить бронь
+	$('#timeoutPopUp').removeClass('hidden')
+}
+
+global.cancelBooking = cancelBooking;

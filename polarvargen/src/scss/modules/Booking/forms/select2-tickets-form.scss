@@ -1,0 +1,68 @@
+.ticket-form {
+    *:focus {
+        outline-width: 0 !important;
+        outline: none !important;
+    }
+    .select2-container {
+        border: 1px solid #b1b1b1;
+        box-sizing: border-box;
+        will-change: background-color, color;
+        transition-property: background-color, color;
+        transition-duration: $b_td;
+        transition-timing-function: $b_tf;
+        width: 100%;
+        color: #fff;
+        height: 54px;
+        background: 95% 50%;
+        border-radius: 3px;
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 700;
+        width: 100% !important;
+        &:focus {
+            outline: none;
+            border-radius: 3px 3px 0 0;
+        }
+        &.select2-container--focus {
+            background-color: white;
+            color: black;
+            border-radius: 3px 3px 0 0;
+            border-bottom: none;
+        }
+    }
+    .select2-container--default .select2-selection--single {
+        background-color: transparent;
+        border: none;
+        color: white;
+        height: 100%;
+    }
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--single:focus,
+    .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple:focus {
+        outline: none;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 52px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .select2-container--focus .select2-selection--single .select2-selection__rendered {
+        color: black;
+        outline: none;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border-color: white transparent transparent transparent;
+    }
+}
+
+.select2-container--default .select2-results__option {
+    padding: 6px 15px;
+    font-size: 15px;
+    line-height: 20px;
+}

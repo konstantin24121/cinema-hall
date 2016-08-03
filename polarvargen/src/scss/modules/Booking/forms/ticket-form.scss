@@ -1,0 +1,148 @@
+.ticket-form {
+    background: url('/img/bg_steps.jpg') 50% 0 #252525;
+    padding: 40px 0 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    &__timer {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0 auto;
+        color: #b7b7b7;
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    }
+    &__data {
+        font-size: 18px;
+        margin: 40px 0 14px;
+    }
+    &__film-title {
+        font-size: 46px;
+        margin: 0 0 15px;
+        font-weight: bold;
+    }
+    &__places {
+        font-size: 18px;
+    }
+    &__fields {
+        margin-top: 68px;
+    }
+    $group: null;
+    &__form-group {
+    	$group: &;
+        margin-bottom: 20px;
+    }
+    &__input {
+        border: 1px solid #b1b1b1;
+        box-sizing: border-box;
+        will-change: background-color, color;
+        transition-property: background-color, color;
+        transition-duration: $b_td;
+        transition-timing-function: $b_tf;
+        width: 100%;
+        padding: 16px;
+        line-height: 20px;
+        color: #fff;
+        height: 54px;
+        background: 95% 50%;
+        border-radius: 3px;
+        background-color: transparent;
+        font-size: 18px;
+        font-weight: 700;
+        &:focus {
+            background-color: #fff;
+            color: black;
+        }
+
+        #{$group}.is-error &{
+        	border-color: #f7485a;
+        }
+    }
+    &__form-bottom {
+        margin-top: 150px;
+    }
+    &__total {
+        float: right;
+        display: inline-block;
+        margin-right: 10px;
+        height: 43px;
+        line-height: 43px;
+        font-weight: bold;
+    }
+    &__btn {
+        background-color: #b7b7b7;
+        border: none;
+        height: 43px;
+        line-height: 41px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 0 15px;
+        float: right;
+        transition: background-color .3s ease-out, border-color .3s ease-out;
+        font-size: 15px;
+        vertical-align: middle;
+        font-weight: 700;
+    }
+    &__offer {
+        font-size: 13px;
+        line-height: 20px;
+        color: #b7b7b7;
+        &-link {
+            color: white;
+            &:hover {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    &__timeout {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparentize(black, 0.2);
+        text-align: center;
+        &-message {
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	right: 0;
+        	bottom: 0;
+        	margin: auto;
+        	height: 150px;
+
+            &-title {
+                color: #fff;
+                font-size: 26px;
+                line-height: 30px;
+                font-weight: 400;
+                text-shadow: none;
+            }
+            &-descr {
+                font-weight: bold;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+        }
+        &-btn {
+            border: none;
+            background:  #fb760f;
+            height: 43px;
+            line-height: 41px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 0 15px;
+            font-weight: bold;
+            transition: background-color .3s ease-out, border-color .3s ease-out;
+            &:active{
+        	    box-shadow: inset 0 3px 0 #d35e04;
+            }
+        }
+    }
+}
+
+@import "select2-tickets-form";
