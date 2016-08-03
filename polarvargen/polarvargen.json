@@ -1,0 +1,14 @@
+{
+	"sourceFolder": "/src",
+	"distFolder": "../",
+	"publicPath": "/",
+	"cssPath": "/css",
+	"jsPath": "/js",
+	"vendorPath": "/vendors",
+
+	"entryCss" : {
+		"baseSass": "./scss/views/base",
+    },
+    "entryJs" : {
+    }
+}
