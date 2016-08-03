@@ -1,1 +1,45 @@
 // User interface
+// 
+@mixin active-chair {
+	$chair_color1-active:#ff7d1e;
+	$chair_color2-active:#f7650c;
+
+    background-color: $chair_color1-active;
+    background-image: linear-gradient(to top, $chair_color1-active, $chair_color2-active);
+    background-repeat: repeat-x;
+    color: #fefefe;
+    text-shadow: 0 -1px 0 #b15211;
+}
+
+@mixin chair($chair_scale, $context) {
+  	background-color: white;
+    position: relative;
+    border-radius: 3px;
+    width: $chair_scale;
+    height: $chair_scale;
+    display: inline-block;
+    line-height: $chair_scale;
+    text-align: center;
+    font: 700 11px/#{$chair_scale} Arial, Helvetica, sans-serif;
+    color: transparent;
+	
+    #{$context}.is-free & {
+        background-color: white;
+        box-shadow: 0 1px 1px #9e9fa0, -1px 0 1px #dcdde2;
+        .is-dark & {
+            box-shadow: 0 1px 1px #666, inset 0 1px 1px #aaa;
+        }
+    }
+    #{$context}.is-checked & {
+        @include active-chair;
+        box-shadow: 0 1px 1px #9e9fa0, inset 0 1px 1px #9e9fa0;
+    }
+    #{$context}.is-busy & {
+        background-color: transparent;
+        box-shadow: inset 0 1px 1px #9e9fa0, inset 0 -1px 0px #fefefe;
+        .is-dark & {
+            box-shadow: inset 0 1px 1px #666, inset 0 -1px 0px #fefefe;
+        }
+    }
+
+}

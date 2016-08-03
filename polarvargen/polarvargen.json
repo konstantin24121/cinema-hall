@@ -2,13 +2,14 @@
 	"sourceFolder": "/src",
 	"distFolder": "../",
 	"publicPath": "/",
-	"cssPath": "/css",
+	"cssPath": "../css",
 	"jsPath": "/js",
 	"vendorPath": "/vendors",
 
 	"entryCss" : {
-		"baseSass": "./scss/views/base",
+		"baseSass": "./scss/views/base"
     },
     "entryJs" : {
+    	 "app": "./js"
     }
 }

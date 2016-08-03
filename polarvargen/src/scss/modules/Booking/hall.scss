@@ -1,0 +1,141 @@
+$hall_bg: #e1e2e6;
+$screen-tip_color: #666;
+$hall-line_color: #9199a1;
+$item_scale: 20px;
+$chair_scale: 18px;
+$tip_width: 50px;
+$wrapper_padding-top: 50px;
+
+$chair_color1-active:#ff7d1e;
+$chair_color2-active:#f7650c;
+$row: null;
+.hall {
+    background-color: $hall_bg;
+    position: relative;
+    font-family: Arial, sans-serif;
+    padding: 50px 0;
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        padding: 50px $tip_width 10px;
+    }
+    &__box {
+        position: absolute;
+        top: $wrapper_padding-top;
+        left: $tip_width;
+        right: $tip_width;
+        bottom: 0;
+        margin: auto;
+        max-width: 100%;
+        z-index: 100;
+        &._lines {
+            z-index: 10;
+        }
+    }
+    &__screen {
+        $tip_fz: 11px;
+        @include span(12);
+        position: relative;
+        top: - ($tip_fz + $item_scale);
+        &-cloth {
+            $height: 5px;
+            width: 100%;
+            height: 5px;
+            background-color: black;
+            background: #f9f9f9;
+            height: $height;
+            margin-top: ($tip_fz - $height) / 2;
+            font-size: 1px;
+            line-height: 1px;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px #999;
+        }
+        &-tip {
+            font-family: Arial, sans-serif;
+            position: absolute;
+            top: 0;
+            color: $screen-tip_color;
+            font-size: $tip_fz;
+            line-height: 1;
+            width: 50px;
+            &._left {
+                left: -75px;
+                text-align: right;
+            }
+            &._right {
+            	
+                right: -75px;
+            }
+        }
+    }
+    &__row {
+        $row: &;
+    }
+    &__places {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        $item: null;
+        &-item {
+            $item: &;
+            position: absolute;
+            width: $item_scale;
+            height: $item_scale;
+            cursor: pointer;
+            z-index: 100;
+            &:hover {
+                z-index: 110;
+            }
+        }
+        &-chair {
+            @include chair($chair_scale, $item);
+
+            #{$item}.is-free:hover &{
+		        $inc: 4px;
+		        width: $chair_scale + $inc * 2 !important;
+		        height: $chair_scale + $inc * 2 !important;
+		        line-height: $chair_scale + $inc * 2 !important;
+		        top: -$inc;
+		        left: -$inc;
+		        @include active-chair;
+		        box-shadow: 0 0 2px #999;
+		    }
+        }
+        &-row {
+            position: absolute;
+            color: #666;
+            width: 50px;
+            height: $item_scale;
+            font-size: 11px;
+            line-height: $item_scale;
+            &::after {
+                content: attr(data-row);
+            }
+            &._left {
+                left: -75px;
+                text-align: right;
+            }
+            &._right {
+                right: -75px;
+            }
+            #{$row}.is-dark & {
+                color: #fff;
+            }
+        }
+    }
+    &__line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: $hall-line_color;
+        height: $item_scale +1px;
+        margin-top: -1px;
+        width: 100%;
+        opacity: 0;
+        &.is-hover {
+            opacity: 1;
+        }
+    }
+}
+
+@import "hall-info";
