@@ -1,0 +1,701 @@
+<!-- saved from url=(0030)http://test.uwin.am/seance.php -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+    /* #hall-wrapper {
+        background-color: #e1e2e6;
+        margin: 0 auto;
+        min-height: 500px;
+        padding: 30px 10px 0;
+        position: relative;
+        width: 100%;
+    } */
+    /* #hall-wrapper .screen {
+        background-color: #f9f9f9;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 1px 1px #999;
+        height: 10px;
+        margin: 0 auto;
+        width: 80%;
+    } */
+    /* #hall-wrapper .places {
+        background-color: blue;
+        margin: 50px auto 0;
+        min-height: 300px;
+        position: relative;
+        width: 80%;
+    } */
+    /* #hall-wrapper .place-item {
+        height: 20px;
+        position: absolute;
+        width: 20px;
+    } */
+    /* #hall-wrapper .place-item-chair {
+        background-color: #efeff1;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px #999;
+        height: 90%;
+        width: 90%;
+    } */
+    /*"row": 3,*/
+    /*"column": 1,*/
+    /*"sector": "Б",*/
+    /*"tribune": "Балкон",*/
+    /*"price_id": 3,*/
+    /*"pos_x": 3,*/
+    /*"pos_y": 0,*/
+    /*"state": "free"*/
+    /*"id": 387686,*/
+    /*"time": "2016-08-03T12:00:00",*/
+    /*"building_id": 6397,*/
+    /*"hall_id": 6398,*/
+    /*"show_id": 2821,*/
+    </style>
+    <link rel="stylesheet" href="css/baseSass.css">
+</head>
+
+<body>
+    <!-- <div class="zoom-controls">
+        <a href="http://test.uwin.am/seance.php#" class="zoom-in">Приблизить</a>
+        <a href="http://test.uwin.am/seance.php#" class="zoom-out">Отдалить</a>
+    </div> -->
+    <div class="hall" id="hall">
+        <div class="container">
+            <!-- Высота wrapper это высота зала плюс, его pagging 50px сверху 10px снизу   -->
+            <div class="hall__wrapper" style="height: 400px;">
+                <div class="hall__box" style="width: 260px;">
+                    <div class="hall__screen">
+                        <span class="hall__screen-tip _left">Экран</span>
+                        <div class="hall__screen-cloth"></div>
+                        <span class="hall__screen-tip _right">Экран</span>
+                    </div>
+                    <div class="hall_places">
+                        <span class="hall__row">
+                                <!-- Левая метка метка -->
+                                <!-- Дублирует data-row data-trubune и top в стилях -->
+                                <!-- Атрибут data-row выводится контекстом, data-trubune не используется, но мб понадобится для чего то-->
+                                <div class="hall__places-row _left" data-row="3" data-tribune="3" style="top: 0"></div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="1" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="3" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 0">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="2" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="4" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 0">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="3" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="5" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 0">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="4" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="6" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 0">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="5" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="7" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 0">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="6" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="8" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 0">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="7" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="9" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 0">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="8" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="10" data-pos-y="0" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 0">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <!-- Правая метка -->
+                                <div class="hall__places-row _right" data-row="3" data-tribune="3" style="top: 0"></div>
+                            </span>
+                        <span class="hall__row">
+                                <!-- Новый ряд -->
+                                <div class="hall__places-row _left" data-row="2" data-tribune="3" style="top: 20px"></div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="1" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="3" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 20px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="2" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="4" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 20px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="3" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="5" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 20px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="4" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="6" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 20px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="5" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="7" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 20px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="2" data-column="6" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="8" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 20px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="2" data-column="7" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="9" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 20px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="2" data-column="8" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="10" data-pos-y="1" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 20px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="2" data-tribune="3" style="top: 20px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="1" data-tribune="3" style="top: 40px"></div>
+                                <div class="hall__places-item is-busy" data-row="1" data-column="1" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="1" data-pos-y="2" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 40px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="1" data-column="2" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="2" data-pos-y="2" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 40px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="1" data-column="3" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="11" data-pos-y="2" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 40px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="1" data-column="4" data-sector="Б" data-tribune="3" data-price-id="3" data-pos-x="12" data-pos-y="2" data-state="free" data-price="60" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 40px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="1" data-tribune="3" style="top: 40px"></div>
+                                </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="11" data-tribune="3" style="top: 80px"></div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="1" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 80px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 80px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 80px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 80px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 80px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 80px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-busy" data-row="11" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 80px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="11" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 80px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="11" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 80px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="11" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 80px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="11" data-column="11" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 80px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="11" data-column="12" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="12" data-pos-y="4" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 80px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="11" data-tribune="3" style="top: 80px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="10" data-tribune="3" style="top: 100px"></div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 100px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 100px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 100px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 100px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 100px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 100px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 100px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 100px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 100px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="10" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="5" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 100px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="10" data-tribune="3" style="top: 100px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="9" data-tribune="3" style="top: 120px"></div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 120px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 120px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 120px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 120px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 120px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 120px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 120px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 120px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 120px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="9" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="6" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 120px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="9" data-tribune="3" style="top: 120px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="8" data-tribune="3" style="top: 140px"></div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 140px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 140px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 140px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 140px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 140px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 140px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 140px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 140px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 140px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="8" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="7" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 140px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="8" data-tribune="3" style="top: 140px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="7" data-tribune="3" style="top: 160px"></div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 160px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 160px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 160px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 160px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 160px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 160px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 160px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 160px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 160px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="7" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="8" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 160px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="7" data-tribune="3" style="top: 160px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="6" data-tribune="3" style="top: 180px"></div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="1" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="2" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 180px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="2" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="3" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 180px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="3" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="4" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 180px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="4" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="5" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 180px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="5" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="6" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 180px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="6" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="7" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 180px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="7" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="8" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 180px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="8" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="9" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 180px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="9" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="10" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 180px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="6" data-column="10" data-sector="0" data-tribune="2" data-price-id="2" data-pos-x="11" data-pos-y="9" data-state="free" data-price="50" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 180px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="6" data-tribune="3" style="top: 180px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="5" data-tribune="3" style="top: 200px"></div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="1" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="3" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 200px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="2" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="4" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 200px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="3" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="5" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 200px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="4" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="6" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 200px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="5" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="7" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 200px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="6" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="8" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 200px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="7" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="9" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 200px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="8" data-sector="А" data-tribune="2" data-price-id="1" data-pos-x="10" data-pos-y="10" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 200px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="5" data-tribune="3" style="top: 200px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="5" data-tribune="3" style="top: 240px"></div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="1" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="1" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 240px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="2" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="2" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 240px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="3" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="3" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 240px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="4" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="4" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 240px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="5" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="5" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 240px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="6" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="6" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 240px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="7" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="7" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 240px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="8" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="8" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 240px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="9" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="9" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 240px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="10" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="10" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 240px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="11" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="11" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 240px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="5" data-column="12" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="12" data-pos-y="12" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 240px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="5" data-tribune="3" style="top: 240px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="4" data-tribune="3" style="top: 260px"></div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="1" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="1" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 260px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="2" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="2" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 260px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="3" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="3" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 260px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="4" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="4" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 260px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="5" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="5" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 260px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="6" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="6" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 260px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="7" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="7" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 260px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="8" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="8" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 260px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="9" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="9" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 260px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="10" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="10" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 260px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="11" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="11" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 260px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="4" data-column="12" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="12" data-pos-y="13" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 260px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="4" data-tribune="3" style="top: 260px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="3" data-tribune="3" style="top: 280px"></div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="1" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="1" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 280px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="2" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="2" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 280px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="3" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="3" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 280px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="4" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="4" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 280px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="5" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="5" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 280px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="6" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="6" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 280px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="7" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="7" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 280px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="8" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="8" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 280px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="9" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="9" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 280px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="10" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="10" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 280px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="11" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="11" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 280px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="3" data-column="12" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="12" data-pos-y="14" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 280px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="3" data-tribune="1" style="top: 280px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="2" data-tribune="1" style="top: 300px"></div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="1" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="1" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 300px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="2" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="2" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 300px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="3" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="3" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 300px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="4" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="4" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 300px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="5" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="5" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 300px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="6" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="6" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 300px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="7" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="7" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 300px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="8" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="8" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 300px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="9" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="9" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 300px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="10" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="10" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 300px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="11" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="11" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 300px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="2" data-column="12" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="12" data-pos-y="15" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 300px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="2" data-tribune="3" style="top: 300px"></div>
+                            </span>
+                        <span class="hall__row">
+                                <div class="hall__places-row _left" data-row="1" data-tribune="1" style="top: 320px"></div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="1" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="1" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 20px;top: 320px; ">
+                                    <div class="hall__places-chair">1</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="2" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="2" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 40px;top: 320px; ">
+                                    <div class="hall__places-chair">2</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="3" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="3" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 60px;top: 320px; ">
+                                    <div class="hall__places-chair">3</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="4" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="4" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 80px;top: 320px; ">
+                                    <div class="hall__places-chair">4</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="5" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="5" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 100px;top: 320px; ">
+                                    <div class="hall__places-chair">5</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="6" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="6" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 120px;top: 320px; ">
+                                    <div class="hall__places-chair">6</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="7" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="7" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 140px;top: 320px; ">
+                                    <div class="hall__places-chair">7</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="8" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="8" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 160px;top: 320px; ">
+                                    <div class="hall__places-chair">8</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="9" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="9" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 180px;top: 320px; ">
+                                    <div class="hall__places-chair">9</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="10" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="10" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 200px;top: 320px; ">
+                                    <div class="hall__places-chair">10</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="11" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="11" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 220px;top: 320px; ">
+                                    <div class="hall__places-chair">11</div>
+                                </div>
+                                <div class="hall__places-item is-free" data-row="1" data-column="12" data-sector="0" data-tribune="1" data-price-id="1" data-pos-x="12" data-pos-y="16" data-state="free" data-price="40" data-id="387686" data-building-id="6397" data-hall-id="6398" data-show-id="2821" data-place-size="20" style="left: 240px;top: 320px; ">
+                                    <div class="hall__places-chair">12</div>
+                                </div>
+                                <div class="hall__places-row _right" data-row="1" data-tribune="1" style="top: 320px"></div>
+                            </span>
+                    </div>
+                </div>
+                <div class="hall__box _lines">
+                    <div class="hall__line" id="hallLine_3_3" style="top:0"></div>
+                    <div class="hall__line" id="hallLine_2_3" style="top:20px"></div>
+                    <div class="hall__line" id="hallLine_1_3" style="top:40px"></div>
+                    <div class="hall__line" id="hallLine_11_2" style="top:80px"></div>
+                    <div class="hall__line" id="hallLine_10_2" style="top:100px"></div>
+                    <div class="hall__line" id="hallLine_9_2" style="top:120px"></div>
+                    <div class="hall__line" id="hallLine_8_2" style="top:140px"></div>
+                    <div class="hall__line" id="hallLine_7_2" style="top:160px"></div>
+                    <div class="hall__line" id="hallLine_6_2" style="top:180px"></div>
+                    <div class="hall__line" id="hallLine_5_2" style="top:200px"></div>
+                    <div class="hall__line" id="hallLine_5_1" style="top:240px"></div>
+                    <div class="hall__line" id="hallLine_4_1" style="top:260px"></div>
+                    <div class="hall__line" id="hallLine_3_1" style="top:280px"></div>
+                    <div class="hall__line" id="hallLine_2_1" style="top:300px"></div>
+                    <div class="hall__line" id="hallLine_1_1" style="top:320px"></div>
+                </div>
+            </div>
+            <div class="hall-info">
+                <div class="hall-info__title">
+                    Зал №2
+                </div>
+                <div class="hall-info__legend is-dark">
+                    <div class="hall-info__story is-free">
+                        <div class="hall-info__story-pointer"></div>
+                        <div class="hall-info__story-descr">Обычные (150р)</div>
+                    </div>
+                    <div class="hall-info__story is-busy">
+                        <div class="hall-info__story-pointer"></div>
+                        <div class="hall-info__story-descr">Место занято</div>
+                    </div>
+                    <div class="hall-info__story is-checked">
+                        <div class="hall-info__story-pointer"></div>
+                        <div class="hall-info__story-descr">Место выбрано</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--     <div id="hall-wrapper" data-place-size="20">
+        <div class="screen" style="width: 260px;"></div>
+        <div class="places" style="height: 340px; width: 260px;">
+        </div>
+    </div> -->
+    <script src="./index_files/jquery.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/app.js"></script>
+    <script>
+    // (function($) {
+    //     var opts = {
+    //         placeSize: $('#hall-wrapper').data('place-size'),
+    //         itemsSelector: '#hall-wrapper .place-item',
+    //         itemsWrapperSelector: '#hall-wrapper .places',
+    //         screenSelector: '#hall-wrapper .screen',
+    //         lastItemSelector: '#hall-wrapper .place-item:last-child',
+    //         zoomOffset: 0
+    //     };
+
+    //     var normalizeView = function() {
+    //         var lastItemOffset = $(opts.lastItemSelector).offset();
+    //         var itemWrapperOffset = $(opts.itemsWrapperSelector).offset();
+    //         var h = lastItemOffset.top - itemWrapperOffset.top + opts.placeSize;
+    //         var w = lastItemOffset.left - itemWrapperOffset.left + opts.placeSize;
+    //         $(opts.itemsWrapperSelector).css({
+    //             'height': h,
+    //             'width': w
+    //         });
+    //         $(opts.screenSelector).css({
+    //             'width': w
+    //         });
+    //     };
+
+    //     var placeZoom = function(type) {
+    //         switch (type) {
+    //             case '+':
+    //                 opts.zoomOffset++;
+    //                 break;
+    //             case '-':
+    //                 opts.zoomOffset--;
+    //                 break;
+    //             default:
+    //                 opts.zoomOffset = 0;
+    //                 break;
+    //         }
+    //         opts.placeSize = $('#hall-wrapper').data('place-size') + opts.zoomOffset;
+    //         $(opts.itemsSelector).each(function() {
+    //             $(this).css({
+    //                 'width': opts.placeSize + 'px',
+    //                 'height': opts.placeSize + 'px'
+    //             });
+    //             $(this).css({
+    //                 'left': ($(this).data('pos-x') * opts.placeSize) + 'px',
+    //                 'top': ($(this).data('pos-y') * opts.placeSize) + 'px'
+    //             });
+    //         });
+    //         normalizeView();
+    //     };
+
+    //     $('.zoom-controls a').on('click', function(e) {
+    //         e.preventDefault();
+    //         placeZoom($(this).hasClass('zoom-in') ? '+' : '-');
+    //     });
+
+
+    //     normalizeView();
+    // })(jQuery);
+    </script>
+</body>
+
+</html>

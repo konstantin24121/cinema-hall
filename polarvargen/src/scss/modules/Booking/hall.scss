@@ -14,10 +14,14 @@ $row: null;
     position: relative;
     font-family: Arial, sans-serif;
     padding: 50px 0;
+    width: 100%;
+    
     &__wrapper {
         position: relative;
-        width: 100%;
         padding: 50px $tip_width 10px;
+        box-sizing: content-box;
+        overflow: hidden;
+	    overflow-x: auto;
     }
     &__box {
         position: absolute;
@@ -139,3 +143,4 @@ $row: null;
 }
 
 @import "hall-info";
+@import "hall-buy";

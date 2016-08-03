@@ -1,0 +1,469 @@
+.rasp_time {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.btn_rasp {
+    margin: 0 2px 7px 0;
+    line-height: 33px;
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 1px 0 #cacaca;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    background: -webkit-linear-gradient(top,#fefefe 0,#f1f1f1 100%);
+    background: linear-gradient(180deg,#fefefe 0,#f1f1f1 100%);
+}
+.btn_rasp, .dd_search__inp {
+    font-size: 14px;
+    color: #666;
+}
+.btn_rasp, .ico, .ico_sl_page, .ui-icon {
+    display: inline-block;
+}
+.btn_rasp:hover, .rasp_item.active .btn_rasp_big:hover, .rasp_item:hover .btn_rasp_big:hover, .rasp_time .btn_rasp:hover {
+    box-shadow: 0 3px 0 #d9d9d9;
+    border-color: #df6e49;
+    background: #ff781a;
+    background: -webkit-linear-gradient(top,#ff8223 0,#ff6d16 100%);
+    background: linear-gradient(180deg,#ff8223 0,#ff6d16 100%);
+    color: #fff;
+}
+.preloader .loader:after {
+    content: "";
+    background: url("../img/preloader_32_f7f7f7.gif") 50% 50% no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    max-height: 100%;
+}
+.frame_window {
+    box-shadow: none;
+    background: #e1e2e6;
+    padding: 0;
+    position: relative;
+}
+.hall-plan {
+    top: 0;
+    position: relative;
+}
+.hall-plan {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.cf:after, .cf:before {
+    content: " ";
+    display: table;
+}
+.hall-plan__form {
+    padding: 0;
+}
+.hall-plan__content, .hall-plan__form {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: static;
+    overflow: visible;
+    padding: 0;
+    min-height: 390px;
+}
+.hall-plan__content, .hall-plan__form {
+    right: 0;
+}
+input, p {
+    font: 1em/1.385 Arial,Helvetica,sans-serif;
+}
+.hall-plan__content, .hall-plan__form {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: static;
+    overflow: visible;
+    padding: 0;
+    min-height: 390px;
+}
+.b-cinema-reservation {
+    height: auto;
+}
+.b-cinema-reservation {
+    overflow: hidden;
+    position: relative;
+}
+.g-hidden, .hide {
+    display: none;
+}
+.b-error-label {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 180px;
+    padding: 5px 10px 5px 28px;
+    background: #000;
+    opacity: .85;
+    color: #fff;
+    font-size: 13px;
+    line-height: 17px;
+    text-shadow: none;
+}
+.b-error-label__icon {
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 14px;
+    height: 14px;
+    background: url(../img/errorlabel.png);
+}
+.b-error-label__nose {
+    position: absolute;
+    bottom: -11px;
+    left: 46px;
+    width: 13px;
+    height: 11px;
+    background: url(../img/errorlabel.png) 0 -15px no-repeat;
+}
+.b-place-cost {
+    display: none;
+    z-index: 1100;
+    min-width: 64px;
+    padding: 5px;
+    background: #333;
+    border-radius: 3px;
+    font-size: 11px;
+    line-height: 1;
+    color: #fff;
+    text-shadow: none;
+    text-align: center;
+}
+.b-place-cost, .place_add__cost {
+    font-weight: 700;
+}
+.b-cinema-reservation .place-sofa, .b-place-cost, .f_check {
+    position: absolute;
+}
+.b-place-cost i.sprite-arrow {
+    position: absolute;
+    display: block;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    width: 10px;
+    height: 5px;
+    background: url(../img/sprite-pack.png) no-repeat;
+}
+.ruble {
+    font-family: als_rublregular;
+    font-style: normal;
+}
+.hall_wrapper {
+    min-height: 341px;
+    position: relative;
+}
+.hall_wrapper .hall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+}
+.b-cinema-reservation .hall {
+    position: relative;
+    z-index: 5;
+}
+.hall {
+    margin-top: auto!important;
+}
+.b-scroll-container__rownums.left-rowCount {
+    text-align: right;
+}
+.b-scroll-container__rownums {
+    position: absolute;
+    margin: 0 50%;
+    z-index: 1010;
+}
+.b-cinema-reservation .cinema-plan-obj {
+    position: absolute;
+    color: #666;
+    width: 25px;
+    padding: 0 5px 0 3px;
+    height: 15px;
+    font-size: 11px;
+    line-height: 15px;
+    z-index: 20;
+    text-shadow: none;
+    background: 0 0;
+    border: none;
+}
+.b-cinema-reservation .row-hover {
+    font-weight: 700;
+    color: #fff;
+    background: #9199a1;
+}
+.b-scroll-container__rownums {
+    position: absolute;
+    margin: 0 50%;
+    z-index: 1010;
+}
+.b-scroll-container__screen, .m-full-height-screen .b-scroll-container__screen, .m-full-width-screen .b-scroll-container__screen {
+    margin: 0 auto -20px;
+    left: -10px;
+    position: relative;
+    height: 20px;
+}
+.b-scroll-container__screen {
+    z-index: 1050;
+}
+.b-cinema-reservation .screen-label {
+    margin-top: 11px;
+}
+.b-cinema-reservation .screen-label {
+    position: absolute;
+    color: #666;
+    font-size: 11px;
+}
+.b-cinema-reservation .screen {
+    position: absolute;
+    background: #f9f9f9;
+    height: 5px;
+    margin-top: 16px;
+    font-size: 1px;
+    line-height: 1px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #999;
+}
+.b-cinema-reservation .screen-label {
+    margin-top: 11px;
+}
+.b-cinema-reservation .m-screen-label__right {
+    right: -10px;
+}
+.b-cinema-reservation .screen-label {
+    position: absolute;
+    color: #666;
+    font-size: 11px;
+}
+.b-cinema-reservation .b-scroll-container {
+    overflow: visible;
+}
+.b-cinema-reservation .b-scroll-container {
+    position: relative;
+    margin: auto;
+    -o-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.b-cinema-plan_out {
+    margin: 0 auto;
+    will-change: margin,top,left;
+}
+.b-cinema-plan {
+    position: relative;
+    margin: 0 auto;
+    z-index: 9;
+}
+.b-cinema-reservation .c, .b-cinema-reservation .common {
+    background: #efeff1;
+    border-radius: 3px;
+}
+.b-seat {
+    position: absolute;
+    z-index: 9;
+    width: 14px;
+    height: 14px;
+    line-height: 11px;
+    font: 0/0 a;
+    background-color: transparent;
+    cursor: hand;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.b-seat, .theatre-seat i {
+    color: transparent;
+    text-shadow: none;
+    border: 0;
+}
+.b-seat, .exception, .exception_icon, .ui-spinner-input {
+    text-align: center;
+}
+.b-seat .mask {
+    width: 16px;
+    height: 16px;
+    margin-left: -1px;
+    background: url(../img/place-mask.png) no-repeat;
+}
+.mask {
+    background: url(../img/place-mask.png) 0 -16px no-repeat;
+    text-indent: -999em;
+}
+.b-cinema-reservation .b-scroll-container .o:hover, .b-cinema-reservation .b-scroll-container .occupied:hover, .b-cinema-reservation .o, .b-cinema-reservation .occupied {
+    background: 0 0;
+    color: #eee;
+    border: none;
+    box-shadow: none;
+    cursor: default;
+    width: 14px!important;
+    height: 14px!important;
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 0;
+    line-height: 0;
+}
+.b-cinema-reservation .rownum-pad {
+    position: absolute;
+    width: 500%;
+    height: 15px;
+    left: -200%;
+    z-index: 1;
+}
+.b-hall-plan-preview-box {
+    position: absolute;
+    z-index: 1063;
+    right: 0;
+    top: -1000px;
+    padding: 10px;
+    border: 5px solid #a3a6a8;
+    background: #a3a6a8;
+    visibility: visible;
+    -webkit-transition: top .3s ease-in;
+    transition: top .3s ease-in;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.hall-plan__legend_out {
+    text-align: center;
+    margin: 0 auto;
+}
+.hall-plan__name {
+    font-weight: 700;
+    color: #838489;
+    font-size: 12px;
+    padding: 5px 0 13px;
+}
+.center {
+    text-align: center;
+}
+.hall-plan__legend {
+    position: relative;
+    z-index: 7;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto 20px;
+    max-width: 95%;
+    text-align: center;
+}
+.hall-plan__legend {
+    border-radius: 30px;
+    background: #bcbfc6;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.2);
+}
+.hall-plan__legend__pad {
+    border-radius: 30px;
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.75);
+}
+.b-cinema-reservation .seats-icon-details {
+    margin-left: 18px;
+    margin-top: 3px;
+}
+.b-cinema-reservation .seats-icon-details {
+    display: block;
+    text-align: center;
+    padding: 9px 10px;
+    margin: 0;
+    overflow: hidden;
+}
+.b-cinema-reservation .seats-icon-details li {
+    display: inline-block;
+    margin: 0;
+    padding-right: 18px;
+    padding-left: 0;
+    padding-bottom: 5px;
+    list-style: none;
+    font-size: .846em;
+}
+.hall-plan__legend .b-seat {
+    cursor: default;
+}
+.b-cinema-reservation .c, .b-cinema-reservation .common {
+    background: #efeff1;
+    border-radius: 3px;
+}
+.b-cinema-reservation .seats-icon-details .seats-legend {
+    display: block;
+    white-space: nowrap;
+    padding-left: 20px;
+    margin-top: 1px;
+}
+.b-cinema-reservation .b-scroll-container .o:hover .mask, .b-cinema-reservation .b-scroll-container .occupied:hover .mask, .b-cinema-reservation .o .mask, .b-cinema-reservation .occupied .mask {
+    background: url(../img/place-mask.png) 0 -16px no-repeat;
+    text-indent: -999em;
+}
+.b-cinema-reservation .seats-icon-details .m-seat-fl {
+    display: block;
+    margin-right: -15px;
+    cursor: default;
+}
+.b-cinema-reservation .selected-place-class {
+    font: 700 9px/14px Arial,Helvetica,sans-serif;
+    color: #fff!important;
+    background: #ff781a!important;
+}
+.b-cinema-reservation .b-scroll-container .o:hover, .b-cinema-reservation .b-scroll-container .occupied:hover, .b-cinema-reservation .o, .b-cinema-reservation .occupied {
+    background: 0 0;
+    color: #eee;
+    border: none;
+    box-shadow: none;
+    cursor: default;
+    width: 14px!important;
+    height: 14px!important;
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 0;
+    line-height: 0;
+}
+.event:hover {
+    background:#f0f0f2;
+}
+.b-cinema-reservation .rownum-pad,
+.b-cinema-reservation .rownum-pad:hover,
+.b-cinema-reservation .row-hover {
+    background-color:Transparent !important;
+    color:#666 !important;
+    font-weight:normal !important;
+}
+
+.b-cinema-reservation  .b-scroll-container .m-seat-hl:hover{ 
+    box-shadow:none;
+    width:auto !important;
+    height:14px !important;
+    padding-top:1px;
+    margin:0;
+    text-indent:0;
+    z-index:1050;
+} 
+.place-cost{
+    display:none;
+}
+
+.b-dropdown__button:hover{ 
+    box-shadow: 0 1px 2px #ccc;  
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3); 
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3); 
+}

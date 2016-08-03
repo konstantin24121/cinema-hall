@@ -1,9 +1,7 @@
 
 let HallStorage = {
 	totalTickets: 0,
-	ticket:{
-
-	},
+	ticket: {},
 	summ: 0
 };
 

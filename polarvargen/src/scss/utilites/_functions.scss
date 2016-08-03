@@ -4,3 +4,27 @@
 	position: relative;
 	right: - (span($val) + gutter() * 2);
 }
+
+@function em($pixels, $context: $b_fs) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+@function px($ems, $context: $b_fs) {
+  @if (unitless($ems)) {
+    $ems: $ems * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $ems / $context * 1px;
+}
